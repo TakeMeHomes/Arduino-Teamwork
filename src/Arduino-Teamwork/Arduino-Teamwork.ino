@@ -13,6 +13,5 @@ void loop() {
   Serial.print("Sensor Value: ");
   Serial.println(sensorValue);
 
-  delay(1000);
+  delay(5000);
 }
-nigga
