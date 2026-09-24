@@ -1,13 +1,17 @@
-#define LED_PIN 13
+#define SENSOR_PIN A0
+
+int sensorValue = 0;
 
 void setup() {
-  pinMode(LED_PIN, OUTPUT);
+  Serial.begin(9600);
 }
 
 void loop() {
-  digitalWrite(LED_PIN, HIGH);
-  delay(1000);
 
-  digitalWrite(LED_PIN, LOW);
+  sensorValue = analogRead(SENSOR_PIN);
+
+  Serial.print("Sensor Value: ");
+  Serial.println(sensorValue);
+
   delay(1000);
 }
